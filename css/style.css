@@ -44,12 +44,17 @@ main{
 }
 .controls__container{
     grid-area: 2 / 2 / 4 / 3;
+    height: 80vh;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .control__container{
-    margin: 1.5rem 1rem;
+    margin: 0 1rem;
 }
 .control__container h3{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 300;
 }
 .control__container h3 .fa-chart-simple{
@@ -57,8 +62,8 @@ main{
 }
 input[type="range"] {
     -webkit-appearance: none;
-    height: 0.6rem;
-    width: 10rem;
+    height: 0.9rem;
+    width: 18rem;
     background: #3e3e3e;
     border-radius: 1rem;
     background-image: linear-gradient(90deg, rgba(224,150,136,1) 0%, rgba(239,176,162,1) 73%);
@@ -92,14 +97,14 @@ input[type="range"]::-webkit-slider-thumb {
     width: 80%;
 }
 .percentage__container output{
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 300;
     font-family: inherit;
 }
 .minus-plus__container{
     display: flex;
     justify-content: space-between;
-    width: 10rem;
+    width: 18rem;
 }
 .control__container label{
     font-size: 5rem;
@@ -159,18 +164,21 @@ input[type="range"]::-webkit-slider-thumb {
     margin: 2rem 0;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 1rem;
     width: 90%;
+    height: 80vh;
 }
 .timer{
     background: linear-gradient(180deg, rgba(254,254,254,1) 0%, rgba(238,238,238,1) 70%);
     text-align: center;
     border-radius: 0.5rem;
+    height: 100%;
 }
 .timer h3{
     font-weight: 300;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 2rem;
     margin: 1rem 0;
 }
 .timer .fa-clock{
@@ -180,7 +188,7 @@ input[type="range"]::-webkit-slider-thumb {
     margin: 1.5rem 0;
 }
 .timer .default_time{
-    font-size: 4rem;
+    font-size: 8rem;
     letter-spacing: .3rem;
     text-align: center;
     font-weight: 300;
@@ -190,7 +198,10 @@ input[type="range"]::-webkit-slider-thumb {
     gap: 1rem;
 }
 .timer .default_time span{
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+}
+.fa-angle-up, .fa-angle-down {
+    font-size: 2rem;
 }
 .timer div{
     display: flex;
@@ -204,10 +215,10 @@ input[type="range"]::-webkit-slider-thumb {
 .timer .other_times{
     background-color: #fff;
     border-radius: 50%;
-    font-size: 1.2rem;
+    font-size: 3rem;
     font-weight: 300;
-    width: 3rem;
-    height: 3rem;
+    width: 8rem;
+    height: 8rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -222,11 +233,11 @@ input[type="range"]::-webkit-slider-thumb {
 .timer__container button{
     background: linear-gradient(180deg, rgba(248,183,171,1) 0%, rgba(193,125,130,1) 73%);
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     border: none;
     border-radius: 0.5rem;
     width: 100%;
-    padding: 1rem;
+    padding: 1.5rem;
     cursor: pointer;
 }
