@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section class="img__container">
+            <img src="img/CF-manillar.png" alt="" class="img__cf-manillar">
+            <img src="img/upper-dermis.png" alt="" class="img__upper-dermis">
+        </section>
+        <section class="titles__container">
+            <h1>CryoFrequency</h1>
+            <h2>Abdomen - Flaccidty</h2>
+        </section>
+        <section class="controls__container">
+            <div class="control__container">
+                <h3><i class="fa-solid fa-chart-simple"></i> Power</h3>
+                <div class="percentage__container">
+                    <div class="input__container">
+                        <input type="range" value="70" min="0" max="100" step="10" oninput="rangevalue.value=value"/>
+                        <output id="rangevalue">70%</output>
+                    </div>
+                    <div class="minus-plus__container">
+                        <i class="fa-solid fa-minus"></i>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="control__container">
+                <h3><i class="fa-solid fa-chart-simple"></i> CryoCooling</h3>
+                <div class="percentage__container">
+                    <div class="input__container">
+                        <input type="range" value="0" min="-10" max="0" step="5" oninput="rangevalueTwo.value=value" class="cryo"/>
+                        <output id="rangevalueTwo">MAX</output>
+                    </div>
+                    <div class="minus-plus__container">
+                        <i class="fa-solid fa-circle"></i>
+                        <i class="fa-solid fa-circle"></i>
+                        <i class="fa-solid fa-circle"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="control__container">
+                <h3><i class="fa-solid fa-layer-group"></i> Depth</h3>
+                <div class="depth__container">
+                    <div class="depth__slider">
+                        <i class="fa-solid fa-angle-left"></i>
+                        <p class="depth__title">Superficial Dermis</p>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                    <div>
+                        <button class="depth__button"><i class="fa-solid fa-floppy-disk"></i></button>
+                        <button class="depth__button btn-back"><i class="fa-solid fa-angle-left"></i>BACK</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="timer__container">
+            <div class="timer">
+                <h3><i class="fa-regular fa-clock"></i>Timer</h3>
+                <i class="fa-solid fa-angle-up"></i>
+                <p class="default_time">40 <span>min</span></p>
+                <i class="fa-solid fa-angle-down"></i>
+                <div class="first_times">
+                    <p class="other_times">20</p>
+                    <p class="other_times">30</p>
+                    <p class="other_times active-time">40</p>
+                </div>
+                <div class="second_times">
+                    <p class="other_times"><i class="fa-solid fa-bell"></i></p>
+                    <p class="other_times active-time">5</p>
+                    <p class="other_times">10</p>
+                </div>
+            </div>
+            <button>Next</button>
+        </section>
+    </main>
+    <script src="https://kit.fontawesome.com/1bb6d48af2.js" crossorigin="anonymous"></script>
+</body>
+</html>
