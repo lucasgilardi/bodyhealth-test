@@ -7,7 +7,10 @@ body{
     font-family: 'Roboto', sans-serif;
     color: #757575;
     height: 100vh;
- }
+}
+i{
+    color: #bbbbbb;
+}
 main{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -17,22 +20,9 @@ main{
                         "img controls timer"
                         "img controls timer";
 }
-.img__container{
-    /* grid-area: 1 / 1 / 4 / 2; */
-    grid-area: img;
-}
-.img__container img{
-    width: 95%;
-    display: block;
-}
-.img__cf-manillar{
-    margin-bottom: -6rem;
-    z-index: 1;
-    position: relative;
-}
-/*Controls*/
+
+/*Titles*/
 .titles__container{
-    /* grid-area: 1 / 2 / 2 / 4; */
     grid-area: titles;
     display: flex;
     justify-content: space-between;
@@ -44,8 +34,23 @@ main{
     font-size: 1.5rem;
     font-weight: 300;
 }
+
+/*Img*/
+.img__container{
+    grid-area: img;
+}
+.img__container img{
+    width: 95%;
+    display: block;
+}
+.img__cf-manillar{
+    margin-bottom: -4rem;
+    z-index: 1;
+    position: relative;
+}
+
+/*Controls*/
 .controls__container{
-    /* grid-area: 2 / 2 / 4 / 3; */
     grid-area: controls;
     margin: 2rem 0;
     display: flex;
@@ -61,7 +66,7 @@ main{
 }
 .control__container h3{
     font-size: 1.2rem;
-    font-weight: 300;
+    font-weight: 400;
 }
 .control__container h3 .fa-chart-simple{
     margin-right: .5rem;
@@ -155,15 +160,18 @@ input[type="range"]::-webkit-slider-thumb {
     cursor: pointer;
     padding: 1rem;
 }
+.depth__button i{
+    color: #696969;
+}
 .depth__button .fa-angle-left{
     margin-right: .5rem;
 }
 .btn-back{
     margin-left: 4rem;
 }
+
 /*Timer*/
 .timer__container{
-    /* grid-area: 2 / 3 / 4 / 4; */
     grid-area: timer;
     margin: 2rem 0;
     display: flex;
@@ -182,7 +190,7 @@ input[type="range"]::-webkit-slider-thumb {
     height: 100%;
 }
 .timer h3{
-    font-weight: 300;
+    font-weight: 400;
     text-align: center;
     font-size: 1.2rem;
     margin: 1rem 0 0 0;
@@ -268,6 +276,8 @@ hr{
     padding: 1rem;
     cursor: pointer;
 }
+
+/*Responsive*/
 @media (min-width: 1920px){
     .controls__container{
         height: 80vh;
@@ -327,6 +337,21 @@ hr{
         padding: 1.5rem;
     }
 }
+@media (max-width: 1200px){
+    .input__container {
+        width: unset; 
+        gap: 2rem;
+    }
+    .percentage__container output {
+        font-size: 2.5rem;
+    }
+    .depth__title {
+        font-size: 1.5rem;
+    }
+    .btn-back {
+        margin-left: 2rem;
+    }
+}
 @media (max-width: 768px){
     main{
         grid-template-columns: 1fr;
@@ -350,10 +375,6 @@ hr{
     .control__container {
         align-items: center;
     }
-    .input__container {
-        width: unset;
-        gap: 2rem;
-    }
     input[type="range"] {
         width: 25rem;
     }
@@ -362,9 +383,6 @@ hr{
     }
     .depth__container {
         align-items: center;
-    }
-    .depth__title {
-        font-size: 1.5rem;
     }
     .timer__container {
         margin: 2rem auto;
@@ -384,8 +402,5 @@ hr{
     }
     .minus-plus__container {
         width: 10rem;
-    }
-    .btn-back {
-        margin-left: 2rem;
     }
 }
