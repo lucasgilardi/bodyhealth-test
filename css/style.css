@@ -279,6 +279,9 @@ hr{
 
 /*Responsive*/
 @media (min-width: 1920px){
+    .img__cf-manillar{
+        margin-bottom: -5rem;
+    }
     .controls__container{
         height: 80vh;
     }
@@ -397,6 +400,9 @@ hr{
     }
 }
 @media (max-width: 480px){
+    .titles__container h1, .titles__container h2{
+        font-size: 1rem;
+    }
     input[type="range"] {
         width: 10rem;
     }
