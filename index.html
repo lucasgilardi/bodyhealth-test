@@ -29,13 +29,13 @@
                         <output id="rangevalue">70%</output>
                     </div>
                     <div class="minus-plus__container">
-                        <i class="fa-solid fa-minus"></i>
-                        <i class="fa-solid fa-plus"></i>
+                        <i class="fa-solid fa-circle-plus"></i>
+                        <i class="fa-solid fa-circle-minus"></i>
                     </div>
                 </div>
             </div>
             <div class="control__container">
-                <h3><i class="fa-solid fa-chart-simple"></i> CryoCooling</h3>
+                <h3><i class="fa-regular fa-closed-captioning"></i> CryoCooling</h3>
                 <div class="percentage__container">
                     <div class="input__container">
                         <input type="range" value="0" min="-10" max="0" step="5" oninput="rangevalueTwo.value=value" class="cryo"/>
@@ -52,9 +52,13 @@
                 <h3><i class="fa-solid fa-layer-group"></i> Depth</h3>
                 <div class="depth__container">
                     <div class="depth__slider">
-                        <i class="fa-solid fa-angle-left"></i>
-                        <p class="depth__title">Superficial Dermis</p>
-                        <i class="fa-solid fa-angle-right"></i>
+                        <button>
+                            <i class="fa-solid fa-angle-left"></i>
+                        </button>
+                        <h4 class="depth__title">Superficial Dermis</h4>
+                        <button>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button>
                     </div>
                     <div>
                         <button class="depth__button"><i class="fa-solid fa-floppy-disk"></i></button>
@@ -66,21 +70,26 @@
         <section class="timer__container">
             <div class="timer">
                 <h3><i class="fa-regular fa-clock"></i>Timer</h3>
-                <i class="fa-solid fa-angle-up"></i>
+                <button>
+                    <i class="fa-solid fa-angle-up"></i>
+                </button>
                 <p class="default_time">40 <span>min</span></p>
-                <i class="fa-solid fa-angle-down"></i>
+                <button>
+                    <i class="fa-solid fa-angle-down"></i>
+                </button>
                 <div class="first_times">
-                    <p class="other_times">20</p>
-                    <p class="other_times">30</p>
-                    <p class="other_times active-time">40</p>
+                    <button class="other_times">20</button>
+                    <button class="other_times">30</button>
+                    <button class="other_times active-time">40</button>
                 </div>
+                <hr>
                 <div class="second_times">
-                    <p class="other_times"><i class="fa-solid fa-bell"></i></p>
-                    <p class="other_times active-time">5</p>
-                    <p class="other_times">10</p>
+                    <button class="other_times bell-icon"><i class="fa-solid fa-bell"></i></button>
+                    <button class="other_times active-time">5</button>
+                    <button class="other_times">10</button>
                 </div>
             </div>
-            <button>Next</button>
+            <button class="timer__btn-next">Next</button>
         </section>
     </main>
     <script src="https://kit.fontawesome.com/1bb6d48af2.js" crossorigin="anonymous"></script>

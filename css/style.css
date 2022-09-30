@@ -11,28 +11,29 @@ body{
 main{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: .1fr repeat(2, 1fr); /*.5fr originalmente*/
+    grid-template-rows: .1fr repeat(2, 1fr);
     grid-template-areas: 
                         "img titles titles"
                         "img controls timer"
                         "img controls timer";
 }
 .img__container{
-    grid-area: 1 / 1 / 4 / 2;
+    /* grid-area: 1 / 1 / 4 / 2; */
+    grid-area: img;
 }
 .img__container img{
-    width: 85%;
+    width: 95%;
     display: block;
-    /* margin: auto; */
 }
 .img__cf-manillar{
-    margin-bottom: -3rem;
+    margin-bottom: -6rem;
     z-index: 1;
     position: relative;
 }
 /*Controls*/
 .titles__container{
-    grid-area: 1 / 2 / 2 / 4;
+    /* grid-area: 1 / 2 / 2 / 4; */
+    grid-area: titles;
     display: flex;
     justify-content: space-between;
     border-bottom: solid 1px #000;
@@ -40,21 +41,26 @@ main{
     margin: 0 1rem;
 }
 .titles__container h1, .titles__container h2{
+    font-size: 1.5rem;
     font-weight: 300;
 }
 .controls__container{
-    grid-area: 2 / 2 / 4 / 3;
-    height: 80vh;
+    /* grid-area: 2 / 2 / 4 / 3; */
+    grid-area: controls;
     margin: 2rem 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 3rem;
 }
 .control__container{
     margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 .control__container h3{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 300;
 }
 .control__container h3 .fa-chart-simple{
@@ -63,7 +69,7 @@ main{
 input[type="range"] {
     -webkit-appearance: none;
     height: 0.9rem;
-    width: 18rem;
+    width: 12rem;
     background: #3e3e3e;
     border-radius: 1rem;
     background-image: linear-gradient(90deg, rgba(224,150,136,1) 0%, rgba(239,176,162,1) 73%);
@@ -79,12 +85,12 @@ input[type="range"]:focus{
 }
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    height: 1.3rem;
-    width: 1.3rem;
+    height: 1.6rem;
+    width: 1.6rem;
     border-radius: 50%;
     background: #e3e2e3;
     cursor: pointer;
-    box-shadow: 0 0 2px 0 #555;
+    box-shadow: 0px 2px 5px 2px rgba(0,0,0,0.25);
 }
 .percentage__container{
     display: flex;
@@ -97,14 +103,15 @@ input[type="range"]::-webkit-slider-thumb {
     width: 80%;
 }
 .percentage__container output{
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: 300;
     font-family: inherit;
 }
 .minus-plus__container{
     display: flex;
     justify-content: space-between;
-    width: 18rem;
+    width: 12rem;
+    font-size: 1.5rem;
 }
 .control__container label{
     font-size: 5rem;
@@ -113,23 +120,13 @@ input[type="range"]::-webkit-slider-thumb {
 .fa-circle{
     font-size: .3rem;
 }
-.fa-minus, .fa-plus {
-    background: #bbbbbb;
-    color: #fff;
-    height: 1.5rem;
-    width: 1.5rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 .depth__container{
     display: flex;
     flex-direction: column;
-    gap: 5.5rem;
+    gap: 2.5rem;
 }
 .depth__title{
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 300;
 }
 .depth__slider{
@@ -139,18 +136,24 @@ input[type="range"]::-webkit-slider-thumb {
     margin-top: 2rem;
     width: 80%;
 }
+.depth__slider button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: inherit;
+}
 .depth__slider .fa-angle-left, .depth__slider .fa-angle-right{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 .depth__button{
     border: none;
-    width: 6rem;
-    height: 3rem;
+    width: 8rem;
     border-radius: 0.5rem;
     background: linear-gradient(180deg, rgba(210,210,210,1) 0%, rgba(228,228,228,1) 100%);
-    font-size: .8rem;
+    font-size: 1rem;
     color: inherit;
     cursor: pointer;
+    padding: 1rem;
 }
 .depth__button .fa-angle-left{
     margin-right: .5rem;
@@ -160,17 +163,20 @@ input[type="range"]::-webkit-slider-thumb {
 }
 /*Timer*/
 .timer__container{
-    grid-area: 2 / 3 / 4 / 4;
+    /* grid-area: 2 / 3 / 4 / 4; */
+    grid-area: timer;
     margin: 2rem 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 1rem;
     width: 90%;
-    height: 80vh;
 }
 .timer{
-    background: linear-gradient(180deg, rgba(254,254,254,1) 0%, rgba(238,238,238,1) 70%);
+    background: rgb(254,254,254);
+    background: -moz-linear-gradient(180deg, rgba(254,254,254,1) 0%, rgba(238,238,238,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(254,254,254,1) 0%, rgba(238,238,238,1) 100%);
+    background: linear-gradient(180deg, rgba(254,254,254,1) 0%, rgba(238,238,238,1) 100%);
     text-align: center;
     border-radius: 0.5rem;
     height: 100%;
@@ -178,8 +184,8 @@ input[type="range"]::-webkit-slider-thumb {
 .timer h3{
     font-weight: 300;
     text-align: center;
-    font-size: 2rem;
-    margin: 1rem 0;
+    font-size: 1.2rem;
+    margin: 1rem 0 0 0;
 }
 .timer .fa-clock{
     margin-right: 0.5rem;
@@ -188,7 +194,7 @@ input[type="range"]::-webkit-slider-thumb {
     margin: 1.5rem 0;
 }
 .timer .default_time{
-    font-size: 8rem;
+    font-size: 4.5rem;
     letter-spacing: .3rem;
     text-align: center;
     font-weight: 300;
@@ -198,10 +204,27 @@ input[type="range"]::-webkit-slider-thumb {
     gap: 1rem;
 }
 .timer .default_time span{
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+}
+.timer button{
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: inherit;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    transition: all .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .5rem auto;
+}
+.timer button:hover{
+    background-color: #C5C6C3;
 }
 .fa-angle-up, .fa-angle-down {
-    font-size: 2rem;
+    font-size: 1rem;
 }
 .timer div{
     display: flex;
@@ -209,16 +232,17 @@ input[type="range"]::-webkit-slider-thumb {
     margin-top: 1.2rem;
     padding-bottom: 1rem;
 }
-.first_times{
-    border-bottom: solid 1px #000;
+hr{
+    width: 90%;
+    margin: auto;
 }
 .timer .other_times{
     background-color: #fff;
     border-radius: 50%;
-    font-size: 3rem;
+    font-size: 1.5rem;
     font-weight: 300;
-    width: 8rem;
-    height: 8rem;
+    width: 4rem;
+    height: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -226,18 +250,142 @@ input[type="range"]::-webkit-slider-thumb {
 .timer .other_times .fa-bell{
     color: #9e9e9e;
 }
-.timer .active-time{
+.timer .active-time, .timer .other_times:hover{
     background-color: #696969;
     color: #fff;
 }
-.timer__container button{
-    background: linear-gradient(180deg, rgba(248,183,171,1) 0%, rgba(193,125,130,1) 73%);
+.timer .other_times.bell-icon{
+    background-color: unset;
+}
+.timer__container .timer__btn-next{
+    background: linear-gradient(180deg, rgb(239 176 162) 0%, rgb(224 150 136) 100%);
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     border: none;
     border-radius: 0.5rem;
     width: 100%;
-    padding: 1.5rem;
+    padding: 1rem;
     cursor: pointer;
+}
+@media (min-width: 1920px){
+    .controls__container{
+        height: 80vh;
+    }
+    .control__container h3{
+        font-size: 2rem;
+    }
+    input[type="range"] {
+        width: 18rem;
+    }
+    .minus-plus__container{
+        width: 18rem;
+    }
+    .percentage__container output{
+        font-size: 5rem;
+    }
+    .fa-minus, .fa-plus {
+        height: 2rem;
+        width: 2rem;
+    }
+    .depth__container{
+        gap: 5.5rem;
+    }
+    .depth__title{
+        font-size: 2.5rem;
+    }
+    .depth__slider .fa-angle-left, .depth__slider .fa-angle-right{
+        font-size: 2.5rem;
+    }
+    .depth__button{
+        width: 9rem;
+        font-size: 1.2rem;
+        padding: 1.5rem;
+    }
+    .timer__container{
+        height: 80vh;
+    }
+    .timer h3{
+        font-size: 2rem;
+    }
+    .timer .default_time{
+        font-size: 8rem;
+    }
+    .timer .default_time span{
+        font-size: 2.5rem;
+    }
+    .fa-angle-up, .fa-angle-down {
+        font-size: 2rem;
+    }
+    .timer .other_times{
+        font-size: 3rem;
+        width: 8rem;
+        height: 8rem;
+    }
+    .timer__container button{
+        font-size: 1.5rem;
+        padding: 1.5rem;
+    }
+}
+@media (max-width: 768px){
+    main{
+        grid-template-columns: 1fr;
+        grid-template-rows: .1fr .4fr 1fr 1fr;
+        grid-template-areas: 
+                            "titles"
+                            "img"
+                            "controls"
+                            "timer";
+    }
+    .img__container {
+        text-align: center;
+    }
+    .img__container img {
+        width: 50%;
+        display: inline;
+    }
+    .img__cf-manillar {
+        margin-bottom: -4rem;
+    }
+    .control__container {
+        align-items: center;
+    }
+    .input__container {
+        width: unset;
+        gap: 2rem;
+    }
+    input[type="range"] {
+        width: 25rem;
+    }
+    .minus-plus__container {
+        width: 25rem;
+    }
+    .depth__container {
+        align-items: center;
+    }
+    .depth__title {
+        font-size: 1.5rem;
+    }
+    .timer__container {
+        margin: 2rem auto;
+    }
+}
+@media (max-width: 576px){
+    input[type="range"] {
+        width: 15rem;
+    }
+    .minus-plus__container {
+        width: 15rem;
+    }
+}
+@media (max-width: 480px){
+    input[type="range"] {
+        width: 10rem;
+    }
+    .minus-plus__container {
+        width: 10rem;
+    }
+    .btn-back {
+        margin-left: 2rem;
+    }
 }
